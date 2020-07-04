@@ -1,0 +1,126 @@
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+<!-- Add manifest -->
+<link rel="manifest" href="manifest.json">
+<!-- Tell the browser it's a PWA -->
+<meta name="mobile-web-app-capable" content="yes">
+<!-- Tell iOS it's a PWA -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- Make sure theme-color is defined -->
+<meta name="theme-color" content="#db4938">
+<!-- ios support -->
+<link rel="apple-touch-icon" href="images/icons/icon.png" />
+<meta name="apple-mobile-web-app-status-bar" content="#db4938" />
+
+
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<title>Dev'Coffee PWA</title>
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.83);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align:center;
+}
+
+.sidenav a {
+  padding: 22px 0px 2px 0px;
+  text-decoration: none;
+  font-family: 'Lobster', cursive;
+  font-size: 25px;
+  color: #fdfdfd;
+  display: block;
+  transition: 0.3s;
+
+}
+
+.sidenav a:hover{
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/*@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}*/
+</style>
+</head>
+<body>
+<main>
+      <nav>
+        <h1 style="font-family: 'Lobster', cursive;font-size: 35px;"><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;
+          <i class="fa fa-coffee"></i> </span>Dev'Coffee</h1>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Clients</a>
+          <a href="#">Contact</a>
+        </div>
+      </nav>
+      
+
+
+      
+
+      <div class="container"></div>
+</main>
+    
+
+
+
+<script src="js/app.js"></script>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+// if ('serviceWorker' in navigator) {
+//   window.addEventListener('load', function() {
+//     navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+//       // Registration was successful
+//       console.log('ServiceWorker registration successful with scope: ', registration.scope);
+//     }, function(err) {
+//       // registration failed :(
+//       console.log('ServiceWorker registration failed: ', err);
+//     }).catch(function(err) {
+//       console.log(err)
+//     });
+//   });
+// } else {
+//   console.log('service worker is not supported');
+// }
+</script>
+   
+</body>
+</html> 
